@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+
+
+<body>
+  <button class="popup_open" id="popup_open">Button</button>
+  
+  
+    <div class="popup" id="popup">
+      <div class = "popup_body">
+        <div class="popup_content">
+          <button class="popup_close" id="popup_close">X</button>
+          <h1 class="popup_title">Подписаться</h1>
+          <div class="popup_forms">
+          <label class="name" for="name"><b>Name</b></label> <br>
+          <input type="text" placeholder="Your name" name="name" required> <br>
+          <label class="email" for="email"><b>E-mail</b></label> <br>
+          <input type="text" placeholder="Your e-mail" name="email" required><br>
+          <button class="popup_close" id="send_form">OTPRAVIT'</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*если кнопка одна
+      let elem = document.getElementById('popup')
+    document.getElementById('popup_open').addEventListener ('click', () => elem.style.display = 'block'),
+    document.getElementById('popup_close').addEventListener ('click', () => elem.style.display ='none');
+      */
+        
+      /*let elem = document.querySelector('.popup')
+      document.querySelector('.popup_open').addEventListener('click', show);
+      function show() {
+        elem.style.display = 'block'
+      }
+      document.querySelector('.popup_close').addEventListener('click', hide);
+      function hide() {
+        elem.style.display = 'none'
+      }  */
+
+      /*если кнопок несколько не сработало
+      let elem = document.getElementById('popup')
+      document.getElementById('popup_open').addEventListener ('click', () => elem.style.display = 'block')
+
+      const popupClose = document.querySelectorAll('.popup_close')
+      if (popupClose.length > 0) {
+        for (let i = 0; i < popupClose.length; i++) {
+          const element = popupClose[i];
+          element.addEventListener('click', function (event){
+            popupClose(element.closest('.popup'));
+            event.preventDefault();
+          })
+        }
+      }*/
+
+
+      /*если кнопок несколько рабочий, но не оч красивый*/
+      let elem = document.getElementById('popup')
+    document.getElementById('popup_open').addEventListener ('click', () => elem.style.display = 'block'),
+    document.getElementById('popup_close').addEventListener ('click', () => elem.style.display ='none');
+    document.getElementById('send_form').addEventListener ('click', () => elem.style.display ='none');
+      </script>
+</body>
+</html>
